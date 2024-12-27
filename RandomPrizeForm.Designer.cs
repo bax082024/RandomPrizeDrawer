@@ -40,12 +40,14 @@
             listBoxParticipants = new ListBox();
             listBoxPrizes = new ListBox();
             listBoxWinners = new ListBox();
+            lblTitel = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(lblTitel);
             panel1.Controls.Add(listBoxWinners);
             panel1.Controls.Add(listBoxPrizes);
             panel1.Controls.Add(listBoxParticipants);
@@ -60,26 +62,26 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1122, 710);
+            panel1.Size = new Size(790, 710);
             panel1.TabIndex = 0;
             // 
             // textBoxPrize
             // 
-            textBoxPrize.Location = new Point(538, 339);
+            textBoxPrize.Location = new Point(485, 489);
             textBoxPrize.Name = "textBoxPrize";
             textBoxPrize.Size = new Size(100, 23);
             textBoxPrize.TabIndex = 7;
             // 
             // textBoxParticipant
             // 
-            textBoxParticipant.Location = new Point(536, 295);
+            textBoxParticipant.Location = new Point(483, 445);
             textBoxParticipant.Name = "textBoxParticipant";
             textBoxParticipant.Size = new Size(100, 23);
             textBoxParticipant.TabIndex = 6;
             // 
             // buttonLoad
             // 
-            buttonLoad.Location = new Point(326, 510);
+            buttonLoad.Location = new Point(281, 670);
             buttonLoad.Name = "buttonLoad";
             buttonLoad.Size = new Size(100, 32);
             buttonLoad.TabIndex = 5;
@@ -88,7 +90,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(326, 472);
+            buttonSave.Location = new Point(281, 632);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(100, 32);
             buttonSave.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(326, 434);
+            buttonReset.Location = new Point(281, 594);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(100, 32);
             buttonReset.TabIndex = 3;
@@ -106,7 +108,7 @@
             // 
             // buttonDrawWinner
             // 
-            buttonDrawWinner.Location = new Point(326, 396);
+            buttonDrawWinner.Location = new Point(281, 556);
             buttonDrawWinner.Name = "buttonDrawWinner";
             buttonDrawWinner.Size = new Size(100, 32);
             buttonDrawWinner.TabIndex = 2;
@@ -115,7 +117,7 @@
             // 
             // buttonAddPrize
             // 
-            buttonAddPrize.Location = new Point(326, 358);
+            buttonAddPrize.Location = new Point(281, 518);
             buttonAddPrize.Name = "buttonAddPrize";
             buttonAddPrize.Size = new Size(100, 32);
             buttonAddPrize.TabIndex = 1;
@@ -124,7 +126,7 @@
             // 
             // buttonAddParticipant
             // 
-            buttonAddParticipant.Location = new Point(326, 320);
+            buttonAddParticipant.Location = new Point(281, 480);
             buttonAddParticipant.Name = "buttonAddParticipant";
             buttonAddParticipant.Size = new Size(100, 32);
             buttonAddParticipant.TabIndex = 0;
@@ -135,35 +137,46 @@
             // 
             listBoxParticipants.FormattingEnabled = true;
             listBoxParticipants.ItemHeight = 15;
-            listBoxParticipants.Location = new Point(260, 93);
+            listBoxParticipants.Location = new Point(37, 174);
             listBoxParticipants.Name = "listBoxParticipants";
-            listBoxParticipants.Size = new Size(120, 94);
+            listBoxParticipants.Size = new Size(151, 229);
             listBoxParticipants.TabIndex = 8;
             // 
             // listBoxPrizes
             // 
             listBoxPrizes.FormattingEnabled = true;
             listBoxPrizes.ItemHeight = 15;
-            listBoxPrizes.Location = new Point(440, 104);
+            listBoxPrizes.Location = new Point(598, 174);
             listBoxPrizes.Name = "listBoxPrizes";
-            listBoxPrizes.Size = new Size(120, 94);
+            listBoxPrizes.Size = new Size(151, 229);
             listBoxPrizes.TabIndex = 9;
             // 
             // listBoxWinners
             // 
             listBoxWinners.FormattingEnabled = true;
             listBoxWinners.ItemHeight = 15;
-            listBoxWinners.Location = new Point(641, 117);
+            listBoxWinners.Location = new Point(221, 174);
             listBoxWinners.Name = "listBoxWinners";
-            listBoxWinners.Size = new Size(120, 94);
+            listBoxWinners.Size = new Size(339, 229);
             listBoxWinners.TabIndex = 10;
+            // 
+            // lblTitel
+            // 
+            lblTitel.AutoSize = true;
+            lblTitel.Font = new Font("Ravie", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitel.ForeColor = Color.Black;
+            lblTitel.Location = new Point(22, 22);
+            lblTitel.Name = "lblTitel";
+            lblTitel.Size = new Size(752, 63);
+            lblTitel.TabIndex = 11;
+            lblTitel.Text = "Random price Drawer";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
-            ClientSize = new Size(1122, 710);
+            ClientSize = new Size(790, 710);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlDark;
             Name = "Form1";
@@ -187,5 +200,6 @@
         private ListBox listBoxWinners;
         private ListBox listBoxPrizes;
         private ListBox listBoxParticipants;
+        private Label lblTitel;
     }
 }
