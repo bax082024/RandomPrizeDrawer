@@ -134,11 +134,13 @@
             // 
             // buttonAddParticipant
             // 
-            buttonAddParticipant.Location = new Point(64, 465);
+            buttonAddParticipant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAddParticipant.ForeColor = Color.Black;
+            buttonAddParticipant.Location = new Point(37, 465);
             buttonAddParticipant.Name = "buttonAddParticipant";
-            buttonAddParticipant.Size = new Size(100, 32);
+            buttonAddParticipant.Size = new Size(151, 32);
             buttonAddParticipant.TabIndex = 0;
-            buttonAddParticipant.Text = "button1";
+            buttonAddParticipant.Text = "Add Participant";
             buttonAddParticipant.UseVisualStyleBackColor = true;
             // 
             // listBoxParticipants
