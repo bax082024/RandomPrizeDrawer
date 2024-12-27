@@ -73,16 +73,18 @@
             // 
             // textBoxPrize
             // 
-            textBoxPrize.Location = new Point(485, 489);
+            textBoxPrize.BackColor = SystemColors.Info;
+            textBoxPrize.Location = new Point(598, 424);
             textBoxPrize.Name = "textBoxPrize";
-            textBoxPrize.Size = new Size(100, 23);
+            textBoxPrize.Size = new Size(151, 23);
             textBoxPrize.TabIndex = 7;
             // 
             // textBoxParticipant
             // 
-            textBoxParticipant.Location = new Point(483, 445);
+            textBoxParticipant.BackColor = SystemColors.Info;
+            textBoxParticipant.Location = new Point(37, 424);
             textBoxParticipant.Name = "textBoxParticipant";
-            textBoxParticipant.Size = new Size(100, 23);
+            textBoxParticipant.Size = new Size(151, 23);
             textBoxParticipant.TabIndex = 6;
             // 
             // buttonLoad
@@ -123,7 +125,7 @@
             // 
             // buttonAddPrize
             // 
-            buttonAddPrize.Location = new Point(281, 518);
+            buttonAddPrize.Location = new Point(623, 465);
             buttonAddPrize.Name = "buttonAddPrize";
             buttonAddPrize.Size = new Size(100, 32);
             buttonAddPrize.TabIndex = 1;
@@ -132,7 +134,7 @@
             // 
             // buttonAddParticipant
             // 
-            buttonAddParticipant.Location = new Point(281, 480);
+            buttonAddParticipant.Location = new Point(64, 465);
             buttonAddParticipant.Name = "buttonAddParticipant";
             buttonAddParticipant.Size = new Size(100, 32);
             buttonAddParticipant.TabIndex = 0;
