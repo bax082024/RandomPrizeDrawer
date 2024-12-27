@@ -125,15 +125,21 @@
             // 
             // buttonAddPrize
             // 
-            buttonAddPrize.Location = new Point(623, 465);
+            buttonAddPrize.BackColor = Color.Gray;
+            buttonAddPrize.FlatStyle = FlatStyle.Popup;
+            buttonAddPrize.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAddPrize.ForeColor = SystemColors.ActiveCaptionText;
+            buttonAddPrize.Location = new Point(598, 465);
             buttonAddPrize.Name = "buttonAddPrize";
-            buttonAddPrize.Size = new Size(100, 32);
+            buttonAddPrize.Size = new Size(151, 32);
             buttonAddPrize.TabIndex = 1;
-            buttonAddPrize.Text = "button2";
-            buttonAddPrize.UseVisualStyleBackColor = true;
+            buttonAddPrize.Text = "Add Prizes";
+            buttonAddPrize.UseVisualStyleBackColor = false;
             // 
             // buttonAddParticipant
             // 
+            buttonAddParticipant.BackColor = Color.Gray;
+            buttonAddParticipant.FlatStyle = FlatStyle.Popup;
             buttonAddParticipant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddParticipant.ForeColor = Color.Black;
             buttonAddParticipant.Location = new Point(37, 465);
@@ -141,7 +147,7 @@
             buttonAddParticipant.Size = new Size(151, 32);
             buttonAddParticipant.TabIndex = 0;
             buttonAddParticipant.Text = "Add Participant";
-            buttonAddParticipant.UseVisualStyleBackColor = true;
+            buttonAddParticipant.UseVisualStyleBackColor = false;
             // 
             // listBoxParticipants
             // 
