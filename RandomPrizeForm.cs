@@ -6,5 +6,7 @@ namespace RandomPrizeDrawer
         {
             InitializeComponent();
         }
+
+        
     }
 }
