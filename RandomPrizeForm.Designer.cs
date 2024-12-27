@@ -37,12 +37,18 @@
             buttonDrawWinner = new Button();
             buttonAddPrize = new Button();
             buttonAddParticipant = new Button();
+            listBoxParticipants = new ListBox();
+            listBoxPrizes = new ListBox();
+            listBoxWinners = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(listBoxWinners);
+            panel1.Controls.Add(listBoxPrizes);
+            panel1.Controls.Add(listBoxParticipants);
             panel1.Controls.Add(textBoxPrize);
             panel1.Controls.Add(textBoxParticipant);
             panel1.Controls.Add(buttonLoad);
@@ -125,6 +131,33 @@
             buttonAddParticipant.Text = "button1";
             buttonAddParticipant.UseVisualStyleBackColor = true;
             // 
+            // listBoxParticipants
+            // 
+            listBoxParticipants.FormattingEnabled = true;
+            listBoxParticipants.ItemHeight = 15;
+            listBoxParticipants.Location = new Point(260, 93);
+            listBoxParticipants.Name = "listBoxParticipants";
+            listBoxParticipants.Size = new Size(120, 94);
+            listBoxParticipants.TabIndex = 8;
+            // 
+            // listBoxPrizes
+            // 
+            listBoxPrizes.FormattingEnabled = true;
+            listBoxPrizes.ItemHeight = 15;
+            listBoxPrizes.Location = new Point(440, 104);
+            listBoxPrizes.Name = "listBoxPrizes";
+            listBoxPrizes.Size = new Size(120, 94);
+            listBoxPrizes.TabIndex = 9;
+            // 
+            // listBoxWinners
+            // 
+            listBoxWinners.FormattingEnabled = true;
+            listBoxWinners.ItemHeight = 15;
+            listBoxWinners.Location = new Point(641, 117);
+            listBoxWinners.Name = "listBoxWinners";
+            listBoxWinners.Size = new Size(120, 94);
+            listBoxWinners.TabIndex = 10;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -151,5 +184,8 @@
         private Button buttonAddParticipant;
         private TextBox textBoxPrize;
         private TextBox textBoxParticipant;
+        private ListBox listBoxWinners;
+        private ListBox listBoxPrizes;
+        private ListBox listBoxParticipants;
     }
 }
