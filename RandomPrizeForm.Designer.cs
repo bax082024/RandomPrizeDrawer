@@ -116,12 +116,16 @@
             // 
             // buttonDrawWinner
             // 
-            buttonDrawWinner.Location = new Point(281, 556);
+            buttonDrawWinner.BackColor = Color.DarkSeaGreen;
+            buttonDrawWinner.FlatStyle = FlatStyle.Popup;
+            buttonDrawWinner.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDrawWinner.ForeColor = Color.Black;
+            buttonDrawWinner.Location = new Point(310, 442);
             buttonDrawWinner.Name = "buttonDrawWinner";
-            buttonDrawWinner.Size = new Size(100, 32);
+            buttonDrawWinner.Size = new Size(144, 55);
             buttonDrawWinner.TabIndex = 2;
-            buttonDrawWinner.Text = "button3";
-            buttonDrawWinner.UseVisualStyleBackColor = true;
+            buttonDrawWinner.Text = "DRAW";
+            buttonDrawWinner.UseVisualStyleBackColor = false;
             // 
             // buttonAddPrize
             // 
