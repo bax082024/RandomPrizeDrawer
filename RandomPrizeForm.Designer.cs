@@ -41,12 +41,18 @@
             listBoxPrizes = new ListBox();
             listBoxWinners = new ListBox();
             lblTitel = new Label();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(lblTitel);
             panel1.Controls.Add(listBoxWinners);
             panel1.Controls.Add(listBoxPrizes);
@@ -171,6 +177,39 @@
             lblTitel.TabIndex = 11;
             lblTitel.Text = "Random price Drawer";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(64, 144);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 17);
+            label1.TabIndex = 12;
+            label1.Text = "Participants";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(645, 144);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 17);
+            label2.TabIndex = 13;
+            label2.Text = "Prizes";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(342, 130);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 21);
+            label3.TabIndex = 14;
+            label3.Text = "Winners !";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -201,5 +240,8 @@
         private ListBox listBoxPrizes;
         private ListBox listBoxParticipants;
         private Label lblTitel;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }
