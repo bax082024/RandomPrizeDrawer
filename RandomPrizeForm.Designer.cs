@@ -119,12 +119,16 @@
             // 
             // buttonReset
             // 
+            buttonReset.BackColor = Color.Gray;
+            buttonReset.FlatStyle = FlatStyle.Popup;
+            buttonReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonReset.ForeColor = Color.Black;
             buttonReset.Location = new Point(281, 594);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(100, 32);
             buttonReset.TabIndex = 3;
-            buttonReset.Text = "button4";
-            buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Text = "Reset";
+            buttonReset.UseVisualStyleBackColor = false;
             // 
             // buttonDrawWinner
             // 
