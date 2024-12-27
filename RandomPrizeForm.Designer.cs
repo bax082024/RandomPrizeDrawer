@@ -110,12 +110,16 @@
             // 
             // buttonSave
             // 
+            buttonSave.BackColor = Color.Gray;
+            buttonSave.FlatStyle = FlatStyle.Popup;
+            buttonSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSave.ForeColor = Color.Black;
             buttonSave.Location = new Point(281, 632);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(100, 32);
             buttonSave.TabIndex = 4;
-            buttonSave.Text = "button5";
-            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = false;
             // 
             // buttonReset
             // 
@@ -123,7 +127,7 @@
             buttonReset.FlatStyle = FlatStyle.Popup;
             buttonReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonReset.ForeColor = Color.Black;
-            buttonReset.Location = new Point(281, 594);
+            buttonReset.Location = new Point(221, 549);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(100, 32);
             buttonReset.TabIndex = 3;
