@@ -50,12 +50,16 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
             panel1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(statusStrip1);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
@@ -80,7 +84,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(790, 710);
+            panel1.Size = new Size(790, 642);
             panel1.TabIndex = 0;
             // 
             // textBoxPrize
@@ -105,7 +109,7 @@
             buttonLoad.FlatStyle = FlatStyle.Popup;
             buttonLoad.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLoad.ForeColor = Color.Black;
-            buttonLoad.Location = new Point(281, 670);
+            buttonLoad.Location = new Point(470, 540);
             buttonLoad.Name = "buttonLoad";
             buttonLoad.Size = new Size(100, 32);
             buttonLoad.TabIndex = 5;
@@ -118,7 +122,7 @@
             buttonSave.FlatStyle = FlatStyle.Popup;
             buttonSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSave.ForeColor = Color.Black;
-            buttonSave.Location = new Point(354, 549);
+            buttonSave.Location = new Point(332, 540);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(100, 32);
             buttonSave.TabIndex = 4;
@@ -131,7 +135,7 @@
             buttonReset.FlatStyle = FlatStyle.Popup;
             buttonReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonReset.ForeColor = Color.Black;
-            buttonReset.Location = new Point(221, 549);
+            buttonReset.Location = new Point(199, 540);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(100, 32);
             buttonReset.TabIndex = 3;
@@ -314,18 +318,36 @@
             label9.TabIndex = 20;
             label9.Text = "<";
             // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 620);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(790, 22);
+            statusStrip1.TabIndex = 21;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.ForeColor = Color.Black;
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(74, 17);
+            toolStripStatusLabel1.Text = "Bax Creation";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
-            ClientSize = new Size(790, 710);
+            ClientSize = new Size(790, 642);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlDark;
             Name = "Form1";
             Text = "Random Prize Drawer";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -353,5 +375,7 @@
         private Label label6;
         private Label label5;
         private Label label4;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
