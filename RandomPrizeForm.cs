@@ -8,7 +8,15 @@ namespace RandomPrizeDrawer
         public RandomPrizeForm()
         {
             InitializeComponent();
-            
+           
+            listBoxParticipants.AllowDrop = true;
+            listBoxPrizes.AllowDrop = true;
+
+            listBoxParticipants.DragEnter += ListBoxParticipants_DragEnter;
+            listBoxParticipants.DragDrop += ListBoxParticipants_DragDrop;
+
+            listBoxPrizes.DragEnter += ListBoxPrizes_DragEnter;
+            listBoxPrizes.DragDrop += ListBoxPrizes_DragDrop;
         }
 
         private void buttonAddParticipant_Click(object sender, EventArgs e)
