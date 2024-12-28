@@ -32,4 +32,14 @@ assign prizes to participants in a visually appealing and interactive way!
 
 ---
 
+## Installation
+
+1. **Clone the repository:**
+	- **https://github.com/bax082024/RandomPrizeDrawer.git**
+2. Open the project in **Visual Studio**.
+3. **Rebuild** and run the project.
+
+---
+
+
 
