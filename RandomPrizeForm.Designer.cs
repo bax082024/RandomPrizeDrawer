@@ -198,33 +198,33 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Showcard Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(342, 130);
+            label3.Location = new Point(327, 130);
             label3.Name = "label3";
-            label3.Size = new Size(82, 21);
+            label3.Size = new Size(127, 27);
             label3.TabIndex = 14;
             label3.Text = "Winners !";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(644, 144);
             label2.Name = "label2";
-            label2.Size = new Size(55, 21);
+            label2.Size = new Size(71, 20);
             label2.TabIndex = 13;
             label2.Text = "Prizes";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label1.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(58, 144);
+            label1.Location = new Point(37, 144);
             label1.Name = "label1";
-            label1.Size = new Size(101, 21);
+            label1.Size = new Size(136, 20);
             label1.TabIndex = 12;
             label1.Text = "Participants";
             // 
@@ -242,31 +242,37 @@
             // listBoxWinners
             // 
             listBoxWinners.BackColor = SystemColors.Info;
+            listBoxWinners.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            listBoxWinners.ForeColor = Color.DarkSlateGray;
             listBoxWinners.FormattingEnabled = true;
-            listBoxWinners.ItemHeight = 15;
+            listBoxWinners.ItemHeight = 17;
             listBoxWinners.Location = new Point(221, 174);
             listBoxWinners.Name = "listBoxWinners";
-            listBoxWinners.Size = new Size(339, 229);
+            listBoxWinners.Size = new Size(339, 225);
             listBoxWinners.TabIndex = 10;
             // 
             // listBoxPrizes
             // 
             listBoxPrizes.BackColor = SystemColors.Info;
+            listBoxPrizes.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            listBoxPrizes.ForeColor = Color.DarkSlateGray;
             listBoxPrizes.FormattingEnabled = true;
-            listBoxPrizes.ItemHeight = 15;
+            listBoxPrizes.ItemHeight = 17;
             listBoxPrizes.Location = new Point(598, 174);
             listBoxPrizes.Name = "listBoxPrizes";
-            listBoxPrizes.Size = new Size(151, 229);
+            listBoxPrizes.Size = new Size(151, 225);
             listBoxPrizes.TabIndex = 9;
             // 
             // listBoxParticipants
             // 
             listBoxParticipants.BackColor = SystemColors.Info;
+            listBoxParticipants.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            listBoxParticipants.ForeColor = Color.DarkSlateGray;
             listBoxParticipants.FormattingEnabled = true;
-            listBoxParticipants.ItemHeight = 15;
+            listBoxParticipants.ItemHeight = 17;
             listBoxParticipants.Location = new Point(37, 174);
             listBoxParticipants.Name = "listBoxParticipants";
-            listBoxParticipants.Size = new Size(151, 229);
+            listBoxParticipants.Size = new Size(151, 225);
             listBoxParticipants.TabIndex = 8;
             // 
             // textBoxPrize
@@ -287,7 +293,7 @@
             // 
             // buttonLoad
             // 
-            buttonLoad.BackColor = Color.Gray;
+            buttonLoad.BackColor = Color.LightBlue;
             buttonLoad.FlatStyle = FlatStyle.Popup;
             buttonLoad.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLoad.ForeColor = Color.Black;
@@ -301,7 +307,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.BackColor = Color.Gray;
+            buttonSave.BackColor = Color.LightBlue;
             buttonSave.FlatStyle = FlatStyle.Popup;
             buttonSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSave.ForeColor = Color.Black;
@@ -315,7 +321,7 @@
             // 
             // buttonReset
             // 
-            buttonReset.BackColor = Color.Gray;
+            buttonReset.BackColor = Color.LightBlue;
             buttonReset.FlatStyle = FlatStyle.Popup;
             buttonReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonReset.ForeColor = Color.Black;
@@ -343,7 +349,7 @@
             // 
             // buttonAddPrize
             // 
-            buttonAddPrize.BackColor = Color.Gray;
+            buttonAddPrize.BackColor = Color.LightBlue;
             buttonAddPrize.FlatStyle = FlatStyle.Popup;
             buttonAddPrize.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddPrize.ForeColor = SystemColors.ActiveCaptionText;
@@ -357,7 +363,7 @@
             // 
             // buttonAddParticipant
             // 
-            buttonAddParticipant.BackColor = Color.Gray;
+            buttonAddParticipant.BackColor = Color.LightBlue;
             buttonAddParticipant.FlatStyle = FlatStyle.Popup;
             buttonAddParticipant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddParticipant.ForeColor = Color.Black;
@@ -374,7 +380,7 @@
             AcceptButton = buttonAddParticipant;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.BurlyWood;
+            BackColor = Color.Sienna;
             ClientSize = new Size(790, 642);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlDark;
