@@ -141,6 +141,15 @@ namespace RandomPrizeDrawer
             {
                 MessageBox.Show($"Failed to load session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+        }
+            private class SessionData
+        {
+            public List<string>? Participants { get; set; }
+            public List<string>? Winners { get; set; }
+            public List<string>? Prizes { get; set; }
         }
     }
+    
 }
