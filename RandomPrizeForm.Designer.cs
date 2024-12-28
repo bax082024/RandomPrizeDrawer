@@ -271,6 +271,7 @@
             listBoxWinners.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             listBoxWinners.ForeColor = Color.DarkSlateGray;
             listBoxWinners.FormattingEnabled = true;
+            listBoxWinners.HorizontalScrollbar = true;
             listBoxWinners.ItemHeight = 21;
             listBoxWinners.Location = new Point(221, 174);
             listBoxWinners.Name = "listBoxWinners";
@@ -283,6 +284,7 @@
             listBoxPrizes.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             listBoxPrizes.ForeColor = Color.DarkSlateGray;
             listBoxPrizes.FormattingEnabled = true;
+            listBoxPrizes.HorizontalScrollbar = true;
             listBoxPrizes.ItemHeight = 21;
             listBoxPrizes.Location = new Point(598, 174);
             listBoxPrizes.Name = "listBoxPrizes";
@@ -296,6 +298,7 @@
             listBoxParticipants.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             listBoxParticipants.ForeColor = Color.DarkSlateGray;
             listBoxParticipants.FormattingEnabled = true;
+            listBoxParticipants.HorizontalScrollbar = true;
             listBoxParticipants.ItemHeight = 21;
             listBoxParticipants.Location = new Point(37, 174);
             listBoxParticipants.Name = "listBoxParticipants";
