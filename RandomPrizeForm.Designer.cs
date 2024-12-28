@@ -97,7 +97,7 @@
             // 
             pictureBox1.BackgroundImage = Properties.Resources._1st_prize;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(700, 122);
+            pictureBox1.Location = new Point(700, 130);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(49, 46);
             pictureBox1.TabIndex = 24;
@@ -107,7 +107,7 @@
             // 
             pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(598, 122);
+            pictureBox2.Location = new Point(598, 130);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(49, 46);
             pictureBox2.TabIndex = 23;
@@ -209,22 +209,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(650, 144);
+            label2.Location = new Point(644, 144);
             label2.Name = "label2";
-            label2.Size = new Size(44, 17);
+            label2.Size = new Size(55, 21);
             label2.TabIndex = 13;
             label2.Text = "Prizes";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(64, 144);
+            label1.Location = new Point(58, 144);
             label1.Name = "label1";
-            label1.Size = new Size(81, 17);
+            label1.Size = new Size(101, 21);
             label1.TabIndex = 12;
             label1.Text = "Participants";
             // 
@@ -241,6 +241,7 @@
             // 
             // listBoxWinners
             // 
+            listBoxWinners.BackColor = SystemColors.Info;
             listBoxWinners.FormattingEnabled = true;
             listBoxWinners.ItemHeight = 15;
             listBoxWinners.Location = new Point(221, 174);
@@ -250,6 +251,7 @@
             // 
             // listBoxPrizes
             // 
+            listBoxPrizes.BackColor = SystemColors.Info;
             listBoxPrizes.FormattingEnabled = true;
             listBoxPrizes.ItemHeight = 15;
             listBoxPrizes.Location = new Point(598, 174);
@@ -259,6 +261,7 @@
             // 
             // listBoxParticipants
             // 
+            listBoxParticipants.BackColor = SystemColors.Info;
             listBoxParticipants.FormattingEnabled = true;
             listBoxParticipants.ItemHeight = 15;
             listBoxParticipants.Location = new Point(37, 174);
