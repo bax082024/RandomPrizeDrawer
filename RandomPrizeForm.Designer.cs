@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             label9 = new Label();
@@ -53,12 +55,16 @@
             buttonAddPrize = new Button();
             buttonAddParticipant = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(statusStrip1);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -86,6 +92,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(790, 642);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources._1st_prize;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(700, 122);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(49, 46);
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(598, 122);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(49, 46);
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -185,7 +211,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(645, 144);
+            label2.Location = new Point(650, 144);
             label2.Name = "label2";
             label2.Size = new Size(44, 17);
             label2.TabIndex = 13;
@@ -353,6 +379,8 @@
             Text = "Random Prize Drawer";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
@@ -384,5 +412,7 @@
         private Label label4;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

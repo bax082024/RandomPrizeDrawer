@@ -68,7 +68,6 @@ namespace RandomPrizeDrawer
 
             listBoxWinners.Items.Add($"{selectedParticipant} wins {selectedPrize}!");
 
-            // Remove the participant and prize to avoid duplicates
             listBoxParticipants.Items.RemoveAt(participantIndex);
             listBoxPrizes.Items.RemoveAt(prizeIndex);
         }
@@ -122,12 +121,10 @@ namespace RandomPrizeDrawer
 
                 if (sessionData != null)
                 {
-                    // Clear existing items
                     listBoxParticipants.Items.Clear();
                     listBoxPrizes.Items.Clear();
                     listBoxWinners.Items.Clear();
 
-                    // Populate the ListBox controls with data from the saved session
                     foreach (var participant in sessionData.Participants ?? new List<string>())
                     {
                         listBoxParticipants.Items.Add(participant);
@@ -162,11 +159,7 @@ namespace RandomPrizeDrawer
             public List<string>? Winners { get; set; }
             public List<string>? Prizes { get; set; }
         }
-
-        
-
-        
-
+              
 
     }
 

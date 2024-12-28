@@ -59,5 +59,15 @@ namespace RandomPrizeDrawer.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1st_prize {
+            get {
+                object obj = ResourceManager.GetObject("1st-prize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
