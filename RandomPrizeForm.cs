@@ -46,5 +46,28 @@ namespace RandomPrizeDrawer
             listBoxPrizes.Items.Add(prize);
             textBoxPrize.Clear();
         }
+
+        private void buttonDrawWinner_Click(object sender, EventArgs e)
+        {
+            if (listBoxParticipants.Items.Count == 0 || listBoxPrizes.Items.Count == 0)
+            {
+                MessageBox.Show("Please make sure both participants and prizes are available before drawing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Random random = new Random();
+
+            int participantIndex = random.Next(listBoxParticipants.Items.Count);
+            int prizeIndex = random.Next(listBoxPrizes.Items.Count);
+
+            string selectedParticipant = listBoxParticipants.Items[participantIndex].ToString();
+            string selectedPrize = listBoxPrizes.Items[prizeIndex].ToString();
+
+            listBoxWinners.Items.Add($"{selectedParticipant} wins {selectedPrize}!");
+
+            // Remove the participant and prize to avoid duplicates
+            listBoxParticipants.Items.RemoveAt(participantIndex);
+            listBoxPrizes.Items.RemoveAt(prizeIndex);
+        }
     }
 }

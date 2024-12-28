@@ -307,6 +307,7 @@
             buttonDrawWinner.TabIndex = 2;
             buttonDrawWinner.Text = "DRAW";
             buttonDrawWinner.UseVisualStyleBackColor = false;
+            buttonDrawWinner.Click += buttonDrawWinner_Click;
             // 
             // buttonAddPrize
             // 
