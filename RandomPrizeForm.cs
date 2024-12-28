@@ -106,7 +106,41 @@ namespace RandomPrizeDrawer
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (!File.Exists("session.json"))
+                {
+                    MessageBox.Show("No saved session found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                string json = File.ReadAllText("session.json");
+                var session = System.Text.Json.JsonSerializer.Deserialize<dynamic>(json);
+
+                listBoxParticipants.Items.Clear();
+                foreach (var participant in session.Participants)
+                {
+                    listBoxParticipants.Items.Add(participant);
+                }
+
+                listBoxPrizes.Items.Clear();
+                foreach (var prize in session.Prizes)
+                {
+                    listBoxPrizes.Items.Add(prize);
+                }
+
+                listBoxWinners.Items.Clear();
+                foreach (var winner in session.Winners)
+                {
+                    listBoxWinners.Items.Add(winner);
+                }
+
+                MessageBox.Show("Session loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
