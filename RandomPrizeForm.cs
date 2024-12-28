@@ -78,5 +78,35 @@ namespace RandomPrizeDrawer
             textBoxParticipant.Clear();
             textBoxPrize.Clear();
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var session = new
+                {
+                    Participants = listBoxParticipants.Items.Cast<string>().ToList(),
+                    Prizes = listBoxPrizes.Items.Cast<string>().ToList(),
+                    Winners = listBoxWinners.Items.Cast<string>().ToList()
+                };
+
+                string json = System.Text.Json.JsonSerializer.Serialize(session, new System.Text.Json.JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+
+                File.WriteAllText("session.json", json);
+                MessageBox.Show("Session saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to save session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

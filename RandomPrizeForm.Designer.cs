@@ -268,6 +268,7 @@
             buttonLoad.TabIndex = 5;
             buttonLoad.Text = "Load";
             buttonLoad.UseVisualStyleBackColor = false;
+            buttonLoad.Click += buttonLoad_Click;
             // 
             // buttonSave
             // 
@@ -281,6 +282,7 @@
             buttonSave.TabIndex = 4;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
             // 
             // buttonReset
             // 
