@@ -26,5 +26,25 @@ namespace RandomPrizeDrawer
             listBoxParticipants.Items.Add(participant);
             textBoxParticipant.Clear();
         }
+
+        private void buttonAddPrize_Click(object sender, EventArgs e)
+        {
+            string prize = textBoxPrize.Text.Trim();
+
+            if (string.IsNullOrEmpty(prize))
+            {
+                MessageBox.Show("Please enter a prize name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (listBoxPrizes.Items.Contains(prize))
+            {
+                MessageBox.Show("This prize is already in the list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            listBoxPrizes.Items.Add(prize);
+            textBoxPrize.Clear();
+        }
     }
 }

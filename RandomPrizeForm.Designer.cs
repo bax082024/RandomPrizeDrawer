@@ -29,6 +29,21 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            lblTitel = new Label();
+            listBoxWinners = new ListBox();
+            listBoxPrizes = new ListBox();
+            listBoxParticipants = new ListBox();
             textBoxPrize = new TextBox();
             textBoxParticipant = new TextBox();
             buttonLoad = new Button();
@@ -37,21 +52,6 @@
             buttonDrawWinner = new Button();
             buttonAddPrize = new Button();
             buttonAddParticipant = new Button();
-            listBoxParticipants = new ListBox();
-            listBoxPrizes = new ListBox();
-            listBoxWinners = new ListBox();
-            lblTitel = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -86,6 +86,159 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(790, 642);
             panel1.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 620);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(790, 22);
+            statusStrip1.TabIndex = 21;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.ForeColor = Color.Black;
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(74, 17);
+            toolStripStatusLabel1.Text = "Bax Creation";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(567, 342);
+            label9.Name = "label9";
+            label9.Size = new Size(25, 25);
+            label9.TabIndex = 20;
+            label9.Text = "<";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(567, 263);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 25);
+            label8.TabIndex = 19;
+            label8.Text = "<";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(567, 188);
+            label7.Name = "label7";
+            label7.Size = new Size(25, 25);
+            label7.TabIndex = 18;
+            label7.Text = "<";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(194, 342);
+            label6.Name = "label6";
+            label6.Size = new Size(25, 25);
+            label6.TabIndex = 17;
+            label6.Text = ">";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(194, 263);
+            label5.Name = "label5";
+            label5.Size = new Size(25, 25);
+            label5.TabIndex = 16;
+            label5.Text = ">";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(194, 188);
+            label4.Name = "label4";
+            label4.Size = new Size(25, 25);
+            label4.TabIndex = 15;
+            label4.Text = ">";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(342, 130);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 21);
+            label3.TabIndex = 14;
+            label3.Text = "Winners !";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(645, 144);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 17);
+            label2.TabIndex = 13;
+            label2.Text = "Prizes";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(64, 144);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 17);
+            label1.TabIndex = 12;
+            label1.Text = "Participants";
+            // 
+            // lblTitel
+            // 
+            lblTitel.AutoSize = true;
+            lblTitel.Font = new Font("Ravie", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitel.ForeColor = Color.Black;
+            lblTitel.Location = new Point(22, 22);
+            lblTitel.Name = "lblTitel";
+            lblTitel.Size = new Size(752, 63);
+            lblTitel.TabIndex = 11;
+            lblTitel.Text = "Random price Drawer";
+            // 
+            // listBoxWinners
+            // 
+            listBoxWinners.FormattingEnabled = true;
+            listBoxWinners.ItemHeight = 15;
+            listBoxWinners.Location = new Point(221, 174);
+            listBoxWinners.Name = "listBoxWinners";
+            listBoxWinners.Size = new Size(339, 229);
+            listBoxWinners.TabIndex = 10;
+            // 
+            // listBoxPrizes
+            // 
+            listBoxPrizes.FormattingEnabled = true;
+            listBoxPrizes.ItemHeight = 15;
+            listBoxPrizes.Location = new Point(598, 174);
+            listBoxPrizes.Name = "listBoxPrizes";
+            listBoxPrizes.Size = new Size(151, 229);
+            listBoxPrizes.TabIndex = 9;
+            // 
+            // listBoxParticipants
+            // 
+            listBoxParticipants.FormattingEnabled = true;
+            listBoxParticipants.ItemHeight = 15;
+            listBoxParticipants.Location = new Point(37, 174);
+            listBoxParticipants.Name = "listBoxParticipants";
+            listBoxParticipants.Size = new Size(151, 229);
+            listBoxParticipants.TabIndex = 8;
             // 
             // textBoxPrize
             // 
@@ -167,6 +320,7 @@
             buttonAddPrize.TabIndex = 1;
             buttonAddPrize.Text = "Add Prizes";
             buttonAddPrize.UseVisualStyleBackColor = false;
+            buttonAddPrize.Click += buttonAddPrize_Click;
             // 
             // buttonAddParticipant
             // 
@@ -181,159 +335,6 @@
             buttonAddParticipant.Text = "Add Participant";
             buttonAddParticipant.UseVisualStyleBackColor = false;
             buttonAddParticipant.Click += buttonAddParticipant_Click;
-            // 
-            // listBoxParticipants
-            // 
-            listBoxParticipants.FormattingEnabled = true;
-            listBoxParticipants.ItemHeight = 15;
-            listBoxParticipants.Location = new Point(37, 174);
-            listBoxParticipants.Name = "listBoxParticipants";
-            listBoxParticipants.Size = new Size(151, 229);
-            listBoxParticipants.TabIndex = 8;
-            // 
-            // listBoxPrizes
-            // 
-            listBoxPrizes.FormattingEnabled = true;
-            listBoxPrizes.ItemHeight = 15;
-            listBoxPrizes.Location = new Point(598, 174);
-            listBoxPrizes.Name = "listBoxPrizes";
-            listBoxPrizes.Size = new Size(151, 229);
-            listBoxPrizes.TabIndex = 9;
-            // 
-            // listBoxWinners
-            // 
-            listBoxWinners.FormattingEnabled = true;
-            listBoxWinners.ItemHeight = 15;
-            listBoxWinners.Location = new Point(221, 174);
-            listBoxWinners.Name = "listBoxWinners";
-            listBoxWinners.Size = new Size(339, 229);
-            listBoxWinners.TabIndex = 10;
-            // 
-            // lblTitel
-            // 
-            lblTitel.AutoSize = true;
-            lblTitel.Font = new Font("Ravie", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitel.ForeColor = Color.Black;
-            lblTitel.Location = new Point(22, 22);
-            lblTitel.Name = "lblTitel";
-            lblTitel.Size = new Size(752, 63);
-            lblTitel.TabIndex = 11;
-            lblTitel.Text = "Random price Drawer";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(64, 144);
-            label1.Name = "label1";
-            label1.Size = new Size(81, 17);
-            label1.TabIndex = 12;
-            label1.Text = "Participants";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(645, 144);
-            label2.Name = "label2";
-            label2.Size = new Size(44, 17);
-            label2.TabIndex = 13;
-            label2.Text = "Prizes";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(342, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 21);
-            label3.TabIndex = 14;
-            label3.Text = "Winners !";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(194, 188);
-            label4.Name = "label4";
-            label4.Size = new Size(25, 25);
-            label4.TabIndex = 15;
-            label4.Text = ">";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(194, 263);
-            label5.Name = "label5";
-            label5.Size = new Size(25, 25);
-            label5.TabIndex = 16;
-            label5.Text = ">";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(194, 342);
-            label6.Name = "label6";
-            label6.Size = new Size(25, 25);
-            label6.TabIndex = 17;
-            label6.Text = ">";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(567, 188);
-            label7.Name = "label7";
-            label7.Size = new Size(25, 25);
-            label7.TabIndex = 18;
-            label7.Text = "<";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(567, 263);
-            label8.Name = "label8";
-            label8.Size = new Size(25, 25);
-            label8.TabIndex = 19;
-            label8.Text = "<";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(567, 342);
-            label9.Name = "label9";
-            label9.Size = new Size(25, 25);
-            label9.TabIndex = 20;
-            label9.Text = "<";
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 620);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(790, 22);
-            statusStrip1.TabIndex = 21;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.ForeColor = Color.Black;
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(74, 17);
-            toolStripStatusLabel1.Text = "Bax Creation";
             // 
             // Form1
             // 
