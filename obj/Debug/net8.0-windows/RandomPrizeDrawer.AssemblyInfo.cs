@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomPrizeDrawer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bb03cedb50de8d6fd09a204651f651805037056")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+692126508eb051e2da8740d8f284733bca1f0821")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomPrizeDrawer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomPrizeDrawer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

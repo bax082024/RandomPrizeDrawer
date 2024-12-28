@@ -2,6 +2,9 @@ namespace RandomPrizeDrawer
 {
     public partial class RandomPrizeForm : Form
     {
+        private const string SessionFilePath = "session.json";
+
+
         public RandomPrizeForm()
         {
             InitializeComponent();
@@ -108,112 +111,61 @@ namespace RandomPrizeDrawer
         {
             try
             {
-                if (!File.Exists("session.json"))
+                if (!File.Exists(SessionFilePath))
                 {
                     MessageBox.Show("No saved session found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                string json = File.ReadAllText("session.json");
-                var session = System.Text.Json.JsonSerializer.Deserialize<dynamic>(json);
+                string json = File.ReadAllText(SessionFilePath);
+                var sessionData = System.Text.Json.JsonSerializer.Deserialize<SessionData>(json);
 
-                listBoxParticipants.Items.Clear();
-                foreach (var participant in session.Participants)
+                if (sessionData != null)
                 {
-                    listBoxParticipants.Items.Add(participant);
-                }
+                    // Clear existing items
+                    listBoxParticipants.Items.Clear();
+                    listBoxPrizes.Items.Clear();
+                    listBoxWinners.Items.Clear();
 
-                listBoxPrizes.Items.Clear();
-                foreach (var prize in session.Prizes)
+                    // Populate the ListBox controls with data from the saved session
+                    foreach (var participant in sessionData.Participants ?? new List<string>())
+                    {
+                        listBoxParticipants.Items.Add(participant);
+                    }
+
+                    foreach (var prize in sessionData.Prizes ?? new List<string>())
+                    {
+                        listBoxPrizes.Items.Add(prize);
+                    }
+
+                    foreach (var winner in sessionData.Winners ?? new List<string>())
+                    {
+                        listBoxWinners.Items.Add(winner);
+                    }
+
+                    MessageBox.Show("Session loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
                 {
-                    listBoxPrizes.Items.Add(prize);
+                    MessageBox.Show("Failed to parse session data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                listBoxWinners.Items.Clear();
-                foreach (var winner in session.Winners)
-                {
-                    listBoxWinners.Items.Add(winner);
-                }
-
-                MessageBox.Show("Session loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to load session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
-            private class SessionData
+
+        private class SessionData
         {
             public List<string>? Participants { get; set; }
             public List<string>? Winners { get; set; }
             public List<string>? Prizes { get; set; }
         }
 
-        private void SaveSession()
-        {
-            try
-            {
-                var sessionData = new SessionData
-                {
-                    Participants = listBoxParticipants.Items.Cast<string>().ToList(),
-                    Winners = listBoxWinners.Items.Cast<string>().ToList(),
-                    Prizes = listBoxPrizes.Items.Cast<string>().ToList()
-                };
+        
 
-                string json = System.Text.Json.JsonSerializer.Serialize(sessionData, new System.Text.Json.JsonSerializerOptions
-                {
-                    WriteIndented = true
-                });
-
-                File.WriteAllText(SessionFilePath, json);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to save session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void LoadSession()
-        {
-            try
-            {
-                if (File.Exists(SessionFilePath))
-                {
-                    string json = File.ReadAllText(SessionFilePath);
-                    var sessionData = System.Text.Json.JsonSerializer.Deserialize<SessionData>(json);
-
-                    if (sessionData != null)
-                    {
-                        // Clear current lists
-                        listBoxParticipants.Items.Clear();
-                        listBoxWinners.Items.Clear();
-                        listBoxPrizes.Items.Clear();
-
-                        // Populate lists with saved data
-                        foreach (var participant in sessionData.Participants)
-                        {
-                            listBoxParticipants.Items.Add(participant);
-                        }
-
-                        foreach (var winner in sessionData.Winners)
-                        {
-                            listBoxWinners.Items.Add(winner);
-                        }
-
-                        foreach (var prize in sessionData.Prizes)
-                        {
-                            listBoxPrizes.Items.Add(prize);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to load session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
 
     }
