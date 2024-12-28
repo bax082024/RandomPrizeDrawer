@@ -1,0 +1,8 @@
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.Form1.resources
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.csproj.GenerateResource.cache
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.Properties.Resources.resources
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.AssemblyInfoInputs.cache
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.AssemblyInfo.cs
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.csproj.CoreCompileInputs.cache
+C:\HjemmeKode\C-Sharp\MyProjects\RandomPrizeDrawer\obj\Debug\net8.0-windows\RandomPrizeDrawer.sourcelink.json

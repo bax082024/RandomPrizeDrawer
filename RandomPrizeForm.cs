@@ -1,8 +1,8 @@
 namespace RandomPrizeDrawer
 {
-    public partial class Form1 : Form
+    public partial class RandomPrizeForm : Form
     {
-        public Form1()
+        public RandomPrizeForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace RandomPrizeDrawer
 {
-    partial class Form1
+    partial class RandomPrizeForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -336,7 +336,7 @@
             buttonAddParticipant.UseVisualStyleBackColor = false;
             buttonAddParticipant.Click += buttonAddParticipant_Click;
             // 
-            // Form1
+            // RandomPrizeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -344,7 +344,7 @@
             ClientSize = new Size(790, 642);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlDark;
-            Name = "Form1";
+            Name = "RandomPrizeForm";
             Text = "Random Prize Drawer";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
