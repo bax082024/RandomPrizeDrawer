@@ -199,6 +199,57 @@ namespace RandomPrizeDrawer
             }
         }
 
+        private void ListBoxPrizes_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                if (files.All(file => file.EndsWith(".txt", StringComparison.OrdinalIgnoreCase)))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                }
+                else
+                {
+                    e.Effect = DragDropEffects.None;
+                }
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void ListBoxPrizes_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            foreach (string file in files)
+            {
+                if (file.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+                {
+                    try
+                    {
+                        string[] lines = File.ReadAllLines(file);
+
+                        foreach (string line in lines)
+                        {
+                            if (!string.IsNullOrWhiteSpace(line))
+                            {
+                                listBoxPrizes.Items.Add(line.Trim());
+                            }
+                        }
+
+                        MessageBox.Show($"Prizes from {Path.GetFileName(file)} have been added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error reading file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
         private void ListBoxParticipants_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -252,6 +303,8 @@ namespace RandomPrizeDrawer
                 }
             }
         }
+
+
 
 
 
