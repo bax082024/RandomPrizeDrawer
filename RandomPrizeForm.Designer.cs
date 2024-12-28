@@ -30,7 +30,6 @@
         {
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             label9 = new Label();
@@ -54,17 +53,18 @@
             buttonDrawWinner = new Button();
             buttonAddPrize = new Button();
             buttonAddParticipant = new Button();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(statusStrip1);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -97,21 +97,11 @@
             // 
             pictureBox1.BackgroundImage = Properties.Resources._1st_prize;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(700, 130);
+            pictureBox1.Location = new Point(221, 108);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 46);
+            pictureBox1.Size = new Size(65, 60);
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(598, 130);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(49, 46);
-            pictureBox2.TabIndex = 23;
-            pictureBox2.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -198,11 +188,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Showcard Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(327, 130);
+            label3.Location = new Point(310, 118);
             label3.Name = "label3";
-            label3.Size = new Size(127, 27);
+            label3.Size = new Size(163, 33);
             label3.TabIndex = 14;
             label3.Text = "Winners !";
             // 
@@ -232,7 +222,7 @@
             // 
             lblTitel.AutoSize = true;
             lblTitel.Font = new Font("Ravie", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitel.ForeColor = Color.Black;
+            lblTitel.ForeColor = Color.DarkSlateGray;
             lblTitel.Location = new Point(22, 22);
             lblTitel.Name = "lblTitel";
             lblTitel.Size = new Size(752, 63);
@@ -277,7 +267,7 @@
             // 
             // textBoxPrize
             // 
-            textBoxPrize.BackColor = SystemColors.Info;
+            textBoxPrize.BackColor = Color.LemonChiffon;
             textBoxPrize.Location = new Point(598, 424);
             textBoxPrize.Name = "textBoxPrize";
             textBoxPrize.Size = new Size(151, 23);
@@ -285,7 +275,7 @@
             // 
             // textBoxParticipant
             // 
-            textBoxParticipant.BackColor = SystemColors.Info;
+            textBoxParticipant.BackColor = Color.LemonChiffon;
             textBoxParticipant.Location = new Point(37, 424);
             textBoxParticipant.Name = "textBoxParticipant";
             textBoxParticipant.Size = new Size(151, 23);
@@ -375,6 +365,16 @@
             buttonAddParticipant.UseVisualStyleBackColor = false;
             buttonAddParticipant.Click += buttonAddParticipant_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(495, 108);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(65, 60);
+            pictureBox2.TabIndex = 25;
+            pictureBox2.TabStop = false;
+            // 
             // RandomPrizeForm
             // 
             AcceptButton = buttonAddParticipant;
@@ -389,9 +389,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 

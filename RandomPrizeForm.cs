@@ -159,7 +159,23 @@ namespace RandomPrizeDrawer
             public List<string>? Winners { get; set; }
             public List<string>? Prizes { get; set; }
         }
-              
+
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (var brush = new System.Drawing.Drawing2D.LinearGradientBrush(
+                this.ClientRectangle,
+                Color.LightSkyBlue,  // Top color
+                Color.Orange,    // Bottom color
+                System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+
 
     }
 
