@@ -18,6 +18,12 @@ assign prizes to participants in a visually appealing and interactive way!
 
 ---
 
+## Screenshot
+
+<img src="Images/app.png" alt="1" width="800">
+
+---
+
 ## How It Works
 
 1. **Add Participants**: Enter participant names in the "Add Participant" field and click the `Add Participant` button.
