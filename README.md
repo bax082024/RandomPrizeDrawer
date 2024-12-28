@@ -15,6 +15,7 @@ assign prizes to participants in a visually appealing and interactive way!
 - **Reset**: Clear all data to start fresh.
 - **Gradient Background**: gradient UI for a modern and vibrant look.
 - **Custom Borders**: Borders around sections for better organization and aesthetics.
+- **Drag and Drop**: You can drag and drop `.txt` files directly into the lists.
 
 ---
 
