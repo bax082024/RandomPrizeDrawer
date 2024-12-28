@@ -294,6 +294,7 @@
             buttonReset.TabIndex = 3;
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = false;
+            buttonReset.Click += buttonReset_Click;
             // 
             // buttonDrawWinner
             // 

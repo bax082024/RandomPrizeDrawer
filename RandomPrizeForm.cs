@@ -69,5 +69,14 @@ namespace RandomPrizeDrawer
             listBoxParticipants.Items.RemoveAt(participantIndex);
             listBoxPrizes.Items.RemoveAt(prizeIndex);
         }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            listBoxParticipants.Items.Clear();
+            listBoxPrizes.Items.Clear();
+            listBoxWinners.Items.Clear();
+            textBoxParticipant.Clear();
+            textBoxPrize.Clear();
+        }
     }
 }
