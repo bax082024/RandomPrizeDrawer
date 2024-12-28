@@ -180,6 +180,7 @@
             buttonAddParticipant.TabIndex = 0;
             buttonAddParticipant.Text = "Add Participant";
             buttonAddParticipant.UseVisualStyleBackColor = false;
+            buttonAddParticipant.Click += buttonAddParticipant_Click;
             // 
             // listBoxParticipants
             // 
