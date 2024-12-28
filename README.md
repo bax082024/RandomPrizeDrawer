@@ -18,4 +18,18 @@ assign prizes to participants in a visually appealing and interactive way!
 
 ---
 
+## How It Works
+
+1. **Add Participants**: Enter participant names in the "Add Participant" field and click the `Add Participant` button.
+2. **Add Prizes**: Enter prize names in the "Add Prizes" field and click the `Add Prizes` button.
+3. **Draw Winners**:
+   - Click the `DRAW` button to randomly pair participants and prizes.
+   - The selected participant and prize are displayed in the "Winners" list, and they are removed from the respective lists.
+4. **Save and Load**:
+   - Click `Save` to save the current session.
+   - Click `Load` to restore a previously saved session.
+5. **Reset**: Click `Reset` to clear all lists and start anew.
+
+---
+
 
