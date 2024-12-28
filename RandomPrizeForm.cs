@@ -221,6 +221,38 @@ namespace RandomPrizeDrawer
             }
         }
 
+        private void ListBoxParticipants_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            foreach (string file in files)
+            {
+                if (file.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+                {
+                    try
+                    {
+                        // Read all lines from the file
+                        string[] lines = File.ReadAllLines(file);
+
+                        foreach (string line in lines)
+                        {
+                            // Add each line as a participant if it's not empty
+                            if (!string.IsNullOrWhiteSpace(line))
+                            {
+                                listBoxParticipants.Items.Add(line.Trim());
+                            }
+                        }
+
+                        MessageBox.Show($"Participants from {Path.GetFileName(file)} have been added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error reading file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
 
 
 
