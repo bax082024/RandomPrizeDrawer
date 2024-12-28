@@ -175,6 +175,47 @@ namespace RandomPrizeDrawer
             }
         }
 
+        private void LoadSession()
+        {
+            try
+            {
+                if (File.Exists(SessionFilePath))
+                {
+                    string json = File.ReadAllText(SessionFilePath);
+                    var sessionData = System.Text.Json.JsonSerializer.Deserialize<SessionData>(json);
+
+                    if (sessionData != null)
+                    {
+                        // Clear current lists
+                        listBoxParticipants.Items.Clear();
+                        listBoxWinners.Items.Clear();
+                        listBoxPrizes.Items.Clear();
+
+                        // Populate lists with saved data
+                        foreach (var participant in sessionData.Participants)
+                        {
+                            listBoxParticipants.Items.Add(participant);
+                        }
+
+                        foreach (var winner in sessionData.Winners)
+                        {
+                            listBoxWinners.Items.Add(winner);
+                        }
+
+                        foreach (var prize in sessionData.Prizes)
+                        {
+                            listBoxPrizes.Items.Add(prize);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
     }
 
 }
