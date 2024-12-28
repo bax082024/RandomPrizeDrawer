@@ -8,6 +8,7 @@ namespace RandomPrizeDrawer
         public RandomPrizeForm()
         {
             InitializeComponent();
+            
         }
 
         private void buttonAddParticipant_Click(object sender, EventArgs e)
@@ -168,15 +169,33 @@ namespace RandomPrizeDrawer
             using (var brush = new System.Drawing.Drawing2D.LinearGradientBrush(
                 this.ClientRectangle,
                 Color.LightSkyBlue,  // Top color
-                Color.Orange,    // Bottom color
+                Color.Orange,        // Bottom color
                 System.Drawing.Drawing2D.LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
+
+            using (Pen borderPen = new Pen(Color.DarkSlateGray, 2))
+            {
+                e.Graphics.DrawRectangle(borderPen,
+                    listBoxParticipants.Left - 5, listBoxParticipants.Top - 5,
+                    listBoxParticipants.Width + 10, listBoxParticipants.Height + 10);
+
+                e.Graphics.DrawRectangle(borderPen,
+                    listBoxWinners.Left - 5, listBoxWinners.Top - 5,
+                    listBoxWinners.Width + 10, listBoxWinners.Height + 10);
+
+                e.Graphics.DrawRectangle(borderPen,
+                    listBoxPrizes.Left - 5, listBoxPrizes.Top - 5,
+                    listBoxPrizes.Width + 10, listBoxPrizes.Height + 10);
+            }
         }
 
 
+      
 
+
+     
     }
 
 }

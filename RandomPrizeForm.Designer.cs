@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
@@ -53,11 +54,10 @@
             buttonDrawWinner = new Button();
             buttonAddPrize = new Button();
             buttonAddParticipant = new Button();
-            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -92,6 +92,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(790, 642);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(495, 108);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(65, 60);
+            pictureBox2.TabIndex = 25;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -365,16 +375,6 @@
             buttonAddParticipant.UseVisualStyleBackColor = false;
             buttonAddParticipant.Click += buttonAddParticipant_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources._1st_prize;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(495, 108);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 60);
-            pictureBox2.TabIndex = 25;
-            pictureBox2.TabStop = false;
-            // 
             // RandomPrizeForm
             // 
             AcceptButton = buttonAddParticipant;
@@ -386,12 +386,13 @@
             ForeColor = SystemColors.ControlDark;
             Name = "RandomPrizeForm";
             Text = "Random Prize Drawer";
+      
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
