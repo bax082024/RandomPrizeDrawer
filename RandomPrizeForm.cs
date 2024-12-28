@@ -199,11 +199,33 @@ namespace RandomPrizeDrawer
             }
         }
 
+        private void ListBoxParticipants_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-      
+                // Only allow text files
+                if (files.All(file => file.EndsWith(".txt", StringComparison.OrdinalIgnoreCase)))
+                {
+                    e.Effect = DragDropEffects.Copy;
+                }
+                else
+                {
+                    e.Effect = DragDropEffects.None;
+                }
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
 
 
-     
+
+
+
+
     }
 
 }
