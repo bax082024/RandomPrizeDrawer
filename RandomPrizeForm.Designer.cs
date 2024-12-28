@@ -337,7 +337,7 @@
             // 
             buttonDrawWinner.BackColor = Color.DarkSeaGreen;
             buttonDrawWinner.FlatStyle = FlatStyle.Popup;
-            buttonDrawWinner.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDrawWinner.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDrawWinner.ForeColor = Color.Black;
             buttonDrawWinner.Location = new Point(310, 442);
             buttonDrawWinner.Name = "buttonDrawWinner";
@@ -351,7 +351,7 @@
             // 
             buttonAddPrize.BackColor = Color.LightBlue;
             buttonAddPrize.FlatStyle = FlatStyle.Popup;
-            buttonAddPrize.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAddPrize.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddPrize.ForeColor = SystemColors.ActiveCaptionText;
             buttonAddPrize.Location = new Point(598, 465);
             buttonAddPrize.Name = "buttonAddPrize";
@@ -365,7 +365,7 @@
             // 
             buttonAddParticipant.BackColor = Color.LightBlue;
             buttonAddParticipant.FlatStyle = FlatStyle.Popup;
-            buttonAddParticipant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAddParticipant.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddParticipant.ForeColor = Color.Black;
             buttonAddParticipant.Location = new Point(37, 465);
             buttonAddParticipant.Name = "buttonAddParticipant";
