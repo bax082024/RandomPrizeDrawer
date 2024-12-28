@@ -150,6 +150,31 @@ namespace RandomPrizeDrawer
             public List<string>? Winners { get; set; }
             public List<string>? Prizes { get; set; }
         }
+
+        private void SaveSession()
+        {
+            try
+            {
+                var sessionData = new SessionData
+                {
+                    Participants = listBoxParticipants.Items.Cast<string>().ToList(),
+                    Winners = listBoxWinners.Items.Cast<string>().ToList(),
+                    Prizes = listBoxPrizes.Items.Cast<string>().ToList()
+                };
+
+                string json = System.Text.Json.JsonSerializer.Serialize(sessionData, new System.Text.Json.JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+
+                File.WriteAllText(SessionFilePath, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to save session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
-    
+
 }
